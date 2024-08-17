@@ -1,5 +1,7 @@
 # Sudoku Game with Solver Integration
 
+![Alt Text](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWFzc3o5Ynlic2x1ZGZxY3B6OWtuZDdwZXV6cjQzamI2M3ZuNjVvYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2ZvzzynBTKtR9EhURD/giphy.gif)
+
 ## How to Use
 1. **Install requeriments.txt**: Open your terminal and run `pip install -r requeriments.txt`
 2. **Start the Game**: Run the script `main.py` to launch the Sudoku game window.
