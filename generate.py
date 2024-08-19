@@ -1,7 +1,8 @@
 import random
 import solver
 
-def generateBoard() -> list:
+def generateBoard(difficulty="medium") -> list:
+
     board = [
         [0, 0, 0, 0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -15,6 +16,15 @@ def generateBoard() -> list:
     ]
     
     solver.SudokuSolver(board)
+
+    if difficulty == "easy":
+        cells_to_remove = 20
+    elif difficulty == "medium":
+        cells_to_remove = 30
+    elif difficulty == "hard":
+        cells_to_remove = 40
+    else:
+        cells_to_remove = 30 
     
     positions = [(r, c) for r in range(9) for c in range(9)]
     random.shuffle(positions)
@@ -55,7 +65,12 @@ def generateBoard() -> list:
             num_removed += 1
         
         
-        if num_removed >= 30:
+        if num_removed >= cells_to_remove:
             break
     
     return board
+
+#if __name__ == "__main__":
+#    board = generateBoard(difficulty="medium")
+#    for row in board:
+#        print(row)
